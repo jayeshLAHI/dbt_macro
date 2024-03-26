@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_student_vtp
+    description: ""
+    columns:  
+      - name: vtpid
+        description: ""        
+        tests:
+          - not_null

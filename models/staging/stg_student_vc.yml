@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_student_vc
+    description: ""
+    on-run-end: "{{'macro_log_message()'}}"
+    +schema: all_students
+    
+    columns:
+      - name: vcid
+        description: "This is primary key"
+        tests:
+          - not_null
+        
+      - name: vcname
+        description: "This is name of vocational cordinator"
+        tests:
+          - not_null:
+              severity: warn

@@ -1,0 +1,15 @@
+# Needed for every dbt yml file - https://docs.getdbt.com/faqs/project/why-version-2
+version: 2
+
+sources:
+  - name: all_students
+    # database <> project are interchangeable in dbt-bigquery
+    # project is specific to just dbt-bigquery, whereas database can be used with anything - e.g. Snowflake
+    database: Student
+        
+    tables:
+      - name: VTP      
+      - name: VC
+      - name: VC2
+      - name: Orders
+
